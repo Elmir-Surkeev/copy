@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #52c234 0%, #061700 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+    }
+    .registration-card {
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      background-color: white;
+      overflow: hidden;
+    }
+    .registration-header {
+      background: linear-gradient(to right, #52c234, #061700);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .btn-register {
+      background: linear-gradient(to right, #52c234, #061700);
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .btn-register:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 14px rgba(0,0,0,0.1);
+    }
+    .form-control:focus {
+      border-color: #52c234;
+      box-shadow: 0 0 0 0.2rem rgba(82, 194, 52, 0.25);
+    }
+  </style>
+</head>
+<body>
+<div class="card registration-card">
+  <div class="registration-header">
+    <h2 class="mb-0">Регистрация</h2>
+  </div>
+  <div class="card-body p-4">
+    <form th:action="@{/register}" th:object="${user}" method="post">
+      <div class="mb-3">
+        <label class="form-label">Имя пользователя</label>
+        <input type="text" class="form-control" th:field="*{username}" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" th:field="*{email}" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Пароль</label>
+        <input type="password" class="form-control" th:field="*{password}" required>
+      </div>
+      <button type="submit" class="btn btn-register w-100 text-white">Зарегистрироваться</button>
+      <div class="text-center mt-3">
+        <p>Уже есть аккаунт? <a href="/login" class="text-success">Войти</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
