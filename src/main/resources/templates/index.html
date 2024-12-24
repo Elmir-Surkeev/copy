@@ -94,7 +94,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>ТурАгентство "Горизонт"</title>
+    <title>Аренда авто "Rental_Auto_Kyrgystan"</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -102,7 +102,8 @@
             background-color: #f4f6f9;
         }
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('static/images/travel-bg.jpeg');
+            background-color: black;
+            /*background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('static/images/479c0b1ecf7891073b9d2591297879f6.jpg');*/
             background-size: cover;
             color: white;
             padding: 100px 0;
@@ -125,7 +126,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <i class="fas fa-globe-europe"></i> Горизонт
+            <i class="fas fa-globe-europe"></i> ED rental
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -156,11 +157,11 @@
 
 <!-- Герой-секция -->
 <div class="hero-section text-center" style="
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp')">
-        <h1 class="display-4 mb-4">Откройте мир с "Горизонт"</h1>
-        <p class="lead mb-5">Незабываемые путешествия, которые вдохновляют</p>
+    background-image: url('https://akzent.zp.ua/wp-content/uploads/2021/09/479c0b1ecf7891073b9d2591297879f6.jpg')">
+        <h1 class="display-4 mb-4">Откройте мир удобства с ED_rental"</h1>
+        <p class="lead mb-5">Незабываемые удобства, которые вдохновляют</p>
         <a href="#tours" class="btn btn-primary btn-lg">
-            Выбрать тур <i class="fas fa-plane"></i>
+            Выбрать авто  <i class="fas fa-car"></i>
         </a>
     </div>
 </div>
@@ -169,7 +170,7 @@
 <!-- Туры -->
 <section id="tours" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-5">Наши туры</h2>
+        <h2 class="text-center mb-5">Наши авто</h2>
         <div class="row">
             <div class="col-md-4 mb-4" th:each="tour : ${tours}">
                 <div class="card tour-card h-100">
@@ -197,8 +198,13 @@
             <div class="col-md-6">
                 <h2>История компании</h2>
                 <p>
-                    Компания "Горизонт" была основана в 2010 году с мечтой сделать путешествия доступными и незабываемыми.
-                    За годы работы мы помогли тысячам туристов открыть самые fascinating уголки планеты.
+                    История компаний автопроката в Кыргызстане началась в 1990-х годах после распада СССР, когда страна стала независимой, и начала развиваться частная экономика. Первые компании автопроката появились как небольшие локальные бизнесы, предоставляющие автомобили в аренду туристам, дипломатам и иностранным предпринимателям, приезжающим в страну.
+
+                    В 2000-х годах, с ростом туристического потока и улучшением дорожной инфраструктуры, начали появляться более организованные компании. Они предлагали автомобили как для самостоятельного вождения, так и с водителем, чтобы покрыть спрос на услуги в популярных туристических местах, таких как озеро Иссык-Куль, Бишкек и горные районы.
+
+                    С 2010-х годов автопрокат в Кыргызстане стал более доступным благодаря цифровизации и развитию онлайн-бронирования. Международные платформы, такие как Rentalcars и другие, начали работать в стране, а местные компании стали предлагать услуги через социальные сети и мобильные приложения.
+
+                    Сегодня автопрокат в Кыргызстане продолжает развиваться, предлагая разнообразные услуги — от экономичных автомобилей для городской езды до внедорожников для горных маршрутов. Туристы, бизнесмены и местные жители активно пользуются услугами проката для путешествий по стране.
                 </p>
             </div>
             <div class="col-md-6">
